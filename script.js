@@ -1,11 +1,8 @@
-const links = document.querySelectorAll('.links a');
+const navIcons = document.querySelectorAll('.nav-icon');
 
-links.forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        links.forEach(l => l.classList.remove('active'));
-        
+navIcons.forEach(icon => {
+    icon.addEventListener('click', function() {
+        navIcons.forEach(i => i.classList.remove('active'));
         this.classList.add('active');
     });
 });
