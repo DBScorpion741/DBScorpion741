@@ -1,38 +1,76 @@
+/* Configuración básica de la página */
 body {
     margin: 0;
-    background-color: #000; /* Fondo negro */
-    font-family: sans-serif;
+    padding: 0;
+    background-color: #000; /* Fondo negro sólido */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
 }
 
+/* El navbar rectangular con efecto glassmorphism */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    /* Barra negra semitransparente */
-    background-color: rgba(0, 0, 0, 0.6); 
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro transparente */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque de fondo */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria muy sutil */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo { font-weight: bold; letter-spacing: 2px; }
+/* Estilo del logotipo SINTUX STUDIOS */
+.logo {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
 
-.links, .social { display: flex; gap: 30px; }
+/* Contenedores de grupos de iconos */
+.links, .social {
+    display: flex;
+    gap: 40px; /* Espaciado entre iconos */
+}
 
+/* Configuración base de los iconos */
 .nav-icon {
-    color: white;
-    font-size: 20px;
-    transition: all 0.3s ease;
+    color: #808080; /* Gris por defecto */
+    font-size: 24px;
+    text-decoration: none;
+    transition: all 0.4s ease; /* Transición suave para todos los efectos */
+    cursor: pointer;
 }
 
-/* Efecto Destello y Agrandar */
+/* EFECTO HOVER: Al pasar el mouse */
 .nav-icon:hover {
-    transform: scale(1.3);
-    text-shadow: 0 0 10px white;
+    color: white; /* Se vuelve blanco */
+    transform: scale(1.25); /* Se agranda un poco */
+    /* El destello de luz */
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); 
 }
 
-/* Estado seleccionado: Gris */
+/* ESTADO ACTIVO: Cuando el usuario selecciona un icono */
 .nav-icon.active {
-    color: gray;
+    color: white; /* Se queda blanco */
+    /* Un ligero resplandor constante para marcar la selección */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* Ajuste adicional para los iconos sociales si los quieres también en gris */
+.social a {
+    color: #808080;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: white;
+}
+@media (max-width: 600px) {
+    .navbar { padding: 15px 20px; }
+    .links, .social { gap: 20px; }
 }
