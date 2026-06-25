@@ -1,26 +1,35 @@
+/* Configuración global para el scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
-    font-family: sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Barra de navegación rectangular (Glassmorphism) */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.5); /* Negro transparente */
+    backdrop-filter: blur(15px); /* Efecto de vidrio esmerilado */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    font-family: 'Oswald', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 18px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .links, .social {
@@ -28,26 +37,29 @@ body {
     gap: 40px;
 }
 
-/* Iconos de navegación (Gris a Blanco) */
+/* --- ESTILOS DE NAVEGACIÓN (Gris a Blanco) --- */
 .nav-icon {
-    color: #808080;
+    color: #808080; /* Gris por defecto */
     font-size: 22px;
     text-decoration: none;
     transition: all 0.4s ease;
 }
 
+/* Efecto al pasar el mouse */
 .nav-icon:hover {
     color: white;
     transform: scale(1.3);
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
+/* Clase para el icono seleccionado (permanece blanco) */
 .nav-icon.active {
     color: white;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
 }
 
-/* Iconos sociales (Siempre blancos) */
+/* --- ESTILOS SOCIALES (Siempre blancos) --- */
 .social a {
     color: white;
     font-size: 22px;
@@ -57,4 +69,17 @@ body {
 .social a:hover {
     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
     transform: scale(1.1);
+}
+
+/* --- SECCIONES DE CONTENIDO --- */
+.content {
+    height: 100vh;
+    padding: 100px 50px;
+    border-bottom: 1px solid #222;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar { padding: 20px 20px; }
+    .links, .social { gap: 20px; }
 }
