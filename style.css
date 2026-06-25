@@ -34,3 +34,20 @@ body {
 .navbar a:hover {
     opacity: 0.6;
 }
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/ CURSOR /
+.navbar a:hover {
+    transform: scale(1.2); /* Se agranda un 20% */
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Efecto de destello */
+}
+
+.navbar a.active {
+    color: gray !important;
+}
