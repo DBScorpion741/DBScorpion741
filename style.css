@@ -1,3 +1,4 @@
+/* Desplazamiento suave */
 html { scroll-behavior: smooth; }
 
 body {
@@ -8,7 +9,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Navbar */
+/* Barra de navegación */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -22,32 +23,50 @@ body {
     z-index: 1000;
 }
 
-/* ESTILO DE LAS SECCIONES CENTRADAS */
+.logo { font-weight: bold; letter-spacing: 3px; font-size: 20px; }
+
+.links, .social { display: flex; gap: 40px; }
+
+/* Iconos de navegación */
+.nav-icon {
+    color: #808080;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.nav-icon:hover, .nav-icon.active {
+    color: white;
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+/* Iconos sociales */
+.social a { color: white; font-size: 22px; transition: 0.3s; }
+.social a:hover { transform: scale(1.1); filter: drop-shadow(0 0 5px white); }
+
+/* Secciones centradas */
 .content-section {
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    height: 100vh;
     display: flex;
-    flex-direction: column; /* Apila el título y el párrafo */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 0 20px;
+    /* Ajuste para que el título no quede tapado por el menú sticky */
+    scroll-margin-top: 80px; 
 }
 
 .content-section h1 {
-    font-size: 80px; /* Título grande */
+    font-size: 80px;
     margin: 0 0 20px 0;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
 .content-section p {
-    font-size: 20px; /* Descripción pequeña */
-    color: #a0a0a0; /* Color gris */
+    font-size: 20px;
+    color: #a0a0a0;
     max-width: 600px;
-    line-height: 1.5;
 }
-
-/* Estilos previos de navegación */
-.nav-icon { color: #808080; font-size: 22px; text-decoration: none; transition: 0.4s; }
-.nav-icon:hover, .nav-icon.active { color: white; transform: scale(1.3); }
-.social a { color: white; font-size: 22px; transition: 0.3s; }
