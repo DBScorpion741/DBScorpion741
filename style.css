@@ -60,13 +60,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Ajuste adicional para los iconos sociales si los quieres también en gris */
-.social a {
-    color: #808080;
-    font-size: 22px;
-    transition: 0.3s;
-}
-
 .social a:hover {
     color: white;
 }
