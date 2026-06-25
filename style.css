@@ -1,53 +1,38 @@
 body {
     margin: 0;
-    background-color: #000;
-    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fondo negro */
+    font-family: sans-serif;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: #111
+    padding: 15px 50px;
+    /* Barra negra semitransparente */
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
-    border-bottom: 1px solid #333
 }
 
-.logo {
-    font-weight: bold;
-    letter-spacing: 2px;
-}
+.logo { font-weight: bold; letter-spacing: 2px; }
 
-.links, .social {
-    display: flex;
-    gap: 30px;
-}
+.links, .social { display: flex; gap: 30px; }
 
-.navbar a {
+.nav-icon {
     color: white;
-    text-decoration: none;
     font-size: 20px;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
 }
 
-.navbar a:hover {
-    opacity: 0.6;
+/* Efecto Destello y Agrandar */
+.nav-icon:hover {
+    transform: scale(1.3);
+    text-shadow: 0 0 10px white;
 }
 
-.navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 0.3s ease; /* Transición suave */
-}
-
-/ CURSOR /
-.navbar a:hover {
-    transform: scale(1.2); /* Se agranda un 20% */
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Efecto de destello */
-}
-
-.navbar a.active {
-    color: gray !important;
+/* Estado seleccionado: Gris */
+.nav-icon.active {
+    color: gray;
 }
