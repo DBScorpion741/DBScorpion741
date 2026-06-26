@@ -1,7 +1,7 @@
 const navIcons = document.querySelectorAll('.nav-icon');
 const sections = document.querySelectorAll('.content-section');
 
-// 1. Lógica para los CLICS (tu código original)
+// Lógica de clics
 navIcons.forEach(icon => {
     icon.addEventListener('click', function() {
         navIcons.forEach(i => i.classList.remove('active'));
@@ -9,15 +9,12 @@ navIcons.forEach(icon => {
     });
 });
 
-// 2. Lógica para el SCROLL (detección automática)
+// Lógica de scroll
 window.addEventListener('scroll', () => {
     let current = "";
-
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        // Detecta si la sección está en el centro de la vista
-        if (window.scrollY >= (sectionTop - sectionHeight / 3)) {
+        if (window.scrollY >= (sectionTop - 200)) {
             current = section.getAttribute("id");
         }
     });
