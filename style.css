@@ -33,6 +33,6 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     object-fit: cover; border: 6px solid #00cba9;
     transition: 0.5s ease;
 }
-.hero-logo-large:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #00cba9); border-color: #fff; }
+.hero-logo-large:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #00cba9); border-color: #04E0BB; }
 .hero-title { font-size: 60px; margin-top: 20px; text-transform: uppercase; letter-spacing: 5px; }
 .hero-desc { font-size: 18px; color: #cccccc; max-width: 500px; }
