@@ -1,5 +1,7 @@
 /* Desplazamiento suave */
-html { scroll-behavior: smooth; }
+html { 
+    scroll-behavior: smooth; 
+}
 
 body {
     margin: 0;
@@ -12,10 +14,10 @@ body {
 /* Barra de navegación */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacia logo - links - social */
     align-items: center;
     padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: sticky;
@@ -23,9 +25,26 @@ body {
     z-index: 1000;
 }
 
-.logo { font-weight: bold; letter-spacing: 3px; font-size: 20px; }
+.logo { 
+    font-weight: bold; 
+    letter-spacing: 3px; 
+    font-size: 20px; 
+    flex: 1; /* Ocupa espacio para ayudar al centrado */
+}
 
-.links, .social { display: flex; gap: 40px; }
+.links { 
+    display: flex; 
+    gap: 40px; 
+    flex: 1;           /* Ocupa espacio */
+    justify-content: center; /* Asegura que los iconos estén en el centro exacto */
+}
+
+.social { 
+    display: flex; 
+    gap: 20px; 
+    flex: 1; 
+    justify-content: flex-end; /* Alinea a la derecha */
+}
 
 /* Iconos de navegación */
 .nav-icon {
@@ -47,14 +66,13 @@ body {
 
 /* Secciones centradas */
 .content-section {
-    height: 100vh;
+    min-height: 100vh; /* Cambiado a min-height para mejor flujo */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
-    /* Ajuste para que el título no quede tapado por el menú sticky */
+    padding: 80px 20px; /* Padding top para compensar el navbar sticky */
     scroll-margin-top: 80px; 
 }
 
