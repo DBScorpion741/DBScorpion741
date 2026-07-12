@@ -36,3 +36,16 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .hero-logo-large:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #00cba9); border-color: #04E0BB; }
 .hero-title { font-size: 60px; margin-top: 20px; text-transform: uppercase; letter-spacing: 5px; }
 .hero-desc { font-size: 18px; color: #cccccc; max-width: 500px; }
+
+/* Ajuste de Secciones y Descripciones */
+.content-section h1 {
+    margin-bottom: 5px; /* Acerca el título a la descripción */
+    letter-spacing: 2px;
+}
+
+.section-desc {
+    margin-top: 5px;    /* Acerca la descripción al título */
+    font-size: 1.1rem;
+    color: #cccccc;
+    max-width: 600px;
+}
