@@ -7,17 +7,18 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #00cba9; }
 
-/* Navbar - Corregido colores */
+/* Navbar */
 .navbar { 
     display: flex; justify-content: space-between; align-items: center; 
     padding: 20px 50px; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); 
     position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; 
 }
-.navbar-title { color: #ffffff !important; font-weight: bold; font-size: 20px; letter-spacing: 3px; }
+.navbar-title { color: #ffffff !important; font-weight: bold; font-size: 20px; letter-spacing: 3px; text-decoration: none; }
 .links { position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 40px; }
-.nav-icon { color: #ffffff !important; font-size: 22px; transition: 0.4s; opacity: 0.6; }
-.nav-icon:hover, .nav-icon.active { opacity: 1; transform: scale(1.3); }
-.social a { color: #ffffff !important; font-size: 22px; transition: 0.3s; }
+.nav-icon { color: #ffffff !important; font-size: 22px; transition: 0.4s; opacity: 0.6; text-decoration: none; }
+.nav-icon:hover, .nav-icon.active { opacity: 1; transform: scale(1.3); filter: drop-shadow(0 0 8px #fff); }
+.social a { color: #ffffff !important; font-size: 22px; transition: 0.3s; text-decoration: none; }
+.social a:hover { filter: drop-shadow(0 0 8px #fff); transform: scale(1.1); }
 
 /* Secciones */
 .content-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
@@ -34,7 +35,6 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     max-width: 900px !important; 
     margin: 0 auto !important;
 }
-
 .proyecto-card { 
     position: relative; width: 200px; height: 220px; border-radius: 20px; overflow: hidden; 
     border: 3px solid var(--color-borde, #fff); transition: 0.4s; cursor: pointer;
@@ -52,12 +52,11 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .titulo { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
 .descripcion { font-size: 11px; color: #ddd; }
 
-/* Hero - Logo Circular Perfecto */
+/* Hero - Logo Circular Perfecto con Brillo */
 .hero-logo-large { 
-    width: 280px !important; 
-    height: 280px !important; 
-    border-radius: 50% !important; 
-    object-fit: cover !important; 
-    border: 6px solid #00cba9; 
-    display: block;
+    width: 280px !important; height: 280px !important; 
+    border-radius: 50% !important; object-fit: cover !important; 
+    border: 6px solid #00cba9; display: block; 
+    transition: 0.5s ease;
 }
+.hero-logo-large:hover { transform: scale(1.05); box-shadow: 0 0 30px #00cba9; }
