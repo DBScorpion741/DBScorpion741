@@ -1,3 +1,4 @@
+/* Configuración Global */
 html { scroll-behavior: smooth; }
 body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI', sans-serif; }
 
@@ -6,12 +7,17 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #00cba9; }
 
-/* Navbar */
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; }
-.navbar-title { font-weight: bold; font-size: 20px; letter-spacing: 3px; }
+/* Navbar - Corregido colores */
+.navbar { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding: 20px 50px; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); 
+    position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #222; 
+}
+.navbar-title { color: #ffffff !important; font-weight: bold; font-size: 20px; letter-spacing: 3px; }
 .links { position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 40px; }
-.nav-icon { color: #808080; font-size: 22px; transition: 0.4s; }
-.nav-icon:hover, .nav-icon.active { color: #ffffff; transform: scale(1.3); }
+.nav-icon { color: #ffffff !important; font-size: 22px; transition: 0.4s; opacity: 0.6; }
+.nav-icon:hover, .nav-icon.active { opacity: 1; transform: scale(1.3); }
+.social a { color: #ffffff !important; font-size: 22px; transition: 0.3s; }
 
 /* Secciones */
 .content-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
@@ -21,7 +27,7 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 /* Grid 4xN forzado */
 .proyectos-grid { 
     display: grid !important; 
-    grid-template-columns: repeat(4, 200px) !important; /* Fuerza 4 columnas de 200px */
+    grid-template-columns: repeat(4, 200px) !important; 
     gap: 20px !important; 
     padding: 30px !important; 
     justify-content: center !important; 
@@ -30,39 +36,28 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 }
 
 .proyecto-card { 
-    position: relative; 
-    width: 200px; 
-    height: 220px; 
-    border-radius: 20px; 
-    overflow: hidden; 
-    border: 3px solid var(--color-borde, #fff); /* Fallback a blanco si no hay color */
-    transition: 0.4s; 
-    cursor: pointer;
+    position: relative; width: 200px; height: 220px; border-radius: 20px; overflow: hidden; 
+    border: 3px solid var(--color-borde, #fff); transition: 0.4s; cursor: pointer;
     background-color: #111;
 }
-
-.proyecto-card:hover { 
-    transform: scale(1.05); 
-    box-shadow: 0 0 20px var(--color-borde, #fff); 
-}
-
+.proyecto-card:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--color-borde, #fff); }
 .proyecto-card img { width: 100%; height: 160px; object-fit: cover; }
 
 /* Texto centrado */
 .proyecto-nombre { 
     position: absolute; bottom: 0; width: 100%; height: 60px;
-    background: rgba(0,0,0,0.85); 
-    backdrop-filter: blur(6px); 
-    color: white; 
-    text-align: center; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
+    background: rgba(0,0,0,0.85); backdrop-filter: blur(6px); color: white; 
+    text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;
 }
-
 .titulo { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
 .descripcion { font-size: 11px; color: #ddd; }
 
-/* Hero */
-.hero-logo-large { width: 280px; height: 280px; border-radius: 50%; border: 6px solid #00cba9; }
+/* Hero - Logo Circular Perfecto */
+.hero-logo-large { 
+    width: 280px !important; 
+    height: 280px !important; 
+    border-radius: 50% !important; 
+    object-fit: cover !important; 
+    border: 6px solid #00cba9; 
+    display: block;
+}
