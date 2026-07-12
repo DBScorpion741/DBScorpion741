@@ -24,14 +24,25 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .social a { color: #ffffff !important; font-size: 22px; transition: 0.3s; }
 .social a:hover { transform: scale(1.1); filter: drop-shadow(0 0 5px white); }
 
-/* Secciones */
+/* Secciones Generales */
 .content-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 
-/* Ajuste de proximidad Título-Descripción */
-.content-section h1 { margin-bottom: 0px; font-size: 40px; }
-.section-desc { margin-top: 5px; color: #cccccc; max-width: 600px; }
+/* === SOLUCIÓN DE CERCANÍA === */
+.content-section h1 { 
+    margin-bottom: 0px; /* Elimina el margen inferior del título */
+    font-size: 40px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.section-desc { 
+    margin-top: 5px; /* Pequeño margen superior para separar ligeramente pero mantener cerca */
+    color: #cccccc; 
+    max-width: 600px; 
+    font-size: 1.1rem;
+}
+/* === FIN SOLUCIÓN === */
 
-/* Inicio específico */
+/* Inicio específico (Se mantiene separado por diseño) */
 .hero-logo-large {
     width: 280px; height: 280px; border-radius: 50%;
     object-fit: cover; border: 6px solid #00cba9;
@@ -39,3 +50,4 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 }
 .hero-logo-large:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #00cba9); }
 .hero-title { font-size: 60px; margin-top: 20px; text-transform: uppercase; letter-spacing: 5px; }
+.hero-desc { font-size: 18px; color: #cccccc; max-width: 500px; }
