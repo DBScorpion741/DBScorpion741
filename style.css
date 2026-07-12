@@ -17,35 +17,25 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .navbar-title { color: #ffffff; font-weight: bold; font-size: 20px; letter-spacing: 3px; }
 .links { position: absolute; left: 50%; transform: translateX(-50%); display: flex; gap: 40px; }
 
-/* Iconos de navegación */
+/* Iconos */
 .nav-icon { color: #808080; font-size: 22px; transition: 0.4s; }
 .nav-icon:hover, .nav-icon.active { color: #ffffff; transform: scale(1.3); filter: drop-shadow(0 0 8px white); }
-
-/* Iconos Sociales (BLANCO PURO) */
 .social { display: flex; gap: 20px; }
 .social a { color: #ffffff !important; font-size: 22px; transition: 0.3s; }
 .social a:hover { transform: scale(1.1); filter: drop-shadow(0 0 5px white); }
 
-/* Sección Inicio */
+/* Secciones */
 .content-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+
+/* Ajuste de proximidad Título-Descripción */
+.content-section h1 { margin-bottom: 0px; font-size: 40px; }
+.section-desc { margin-top: 5px; color: #cccccc; max-width: 600px; }
+
+/* Inicio específico */
 .hero-logo-large {
-    width: 280px; height: 280px; border-radius: 50%; /* REDONDEADO */
+    width: 280px; height: 280px; border-radius: 50%;
     object-fit: cover; border: 6px solid #00cba9;
     transition: 0.5s ease;
 }
-.hero-logo-large:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #00cba9); border-color: #04E0BB; }
+.hero-logo-large:hover { transform: scale(1.05); filter: drop-shadow(0 0 25px #00cba9); }
 .hero-title { font-size: 60px; margin-top: 20px; text-transform: uppercase; letter-spacing: 5px; }
-.hero-desc { font-size: 18px; color: #cccccc; max-width: 500px; }
-
-/* Ajuste de Secciones y Descripciones */
-.content-section h1 {
-    margin-bottom: 5px; /* Acerca el título a la descripción */
-    letter-spacing: 2px;
-}
-
-.section-desc {
-    margin-top: 5px;    /* Acerca la descripción al título */
-    font-size: 1.1rem;
-    color: #cccccc;
-    max-width: 600px;
-}
