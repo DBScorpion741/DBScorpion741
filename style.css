@@ -18,26 +18,51 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .content-section h1 { margin-bottom: 5px; font-size: 40px; text-transform: uppercase; }
 .section-desc { margin-top: 5px; color: #cccccc; max-width: 600px; font-size: 1.1rem; }
 
-/* Grid 4xN */
+/* Grid 4xN forzado */
 .proyectos-grid { 
-    display: grid; grid-template-columns: repeat(4, 200px); gap: 20px; padding: 30px; 
-    justify-content: center; max-width: 1000px; margin: 0 auto;
+    display: grid !important; 
+    grid-template-columns: repeat(4, 200px) !important; /* Fuerza 4 columnas de 200px */
+    gap: 20px !important; 
+    padding: 30px !important; 
+    justify-content: center !important; 
+    max-width: 900px !important; 
+    margin: 0 auto !important;
 }
+
 .proyecto-card { 
-    position: relative; width: 200px; height: 220px; border-radius: 20px; overflow: hidden; 
-    border: 3px solid var(--color-borde); transition: 0.4s; cursor: pointer;
+    position: relative; 
+    width: 200px; 
+    height: 220px; 
+    border-radius: 20px; 
+    overflow: hidden; 
+    border: 3px solid var(--color-borde, #fff); /* Fallback a blanco si no hay color */
+    transition: 0.4s; 
+    cursor: pointer;
+    background-color: #111;
 }
-.proyecto-card:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--color-borde); }
-.proyecto-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.proyecto-card:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px var(--color-borde, #fff); 
+}
+
+.proyecto-card img { width: 100%; height: 160px; object-fit: cover; }
 
 /* Texto centrado */
 .proyecto-nombre { 
-    position: absolute; bottom: 0; width: 100%; padding: 10px; background: rgba(0,0,0,0.7); 
-    backdrop-filter: blur(6px); color: white; text-align: center; 
-    display: flex; flex-direction: column; align-items: center; 
+    position: absolute; bottom: 0; width: 100%; height: 60px;
+    background: rgba(0,0,0,0.85); 
+    backdrop-filter: blur(6px); 
+    color: white; 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
 }
-.titulo { font-weight: bold; font-size: 14px; }
-.descripcion { font-size: 11px; color: #ddd; margin-top: 2px; }
+
+.titulo { font-weight: bold; font-size: 14px; margin-bottom: 2px; }
+.descripcion { font-size: 11px; color: #ddd; }
 
 /* Hero */
 .hero-logo-large { width: 280px; height: 280px; border-radius: 50%; border: 6px solid #00cba9; }
