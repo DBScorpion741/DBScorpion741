@@ -103,38 +103,57 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     justify-content: center !important;
 }
 
+/* Tarjeta de Amigo mejorada */
 .amigo-card {
     width: 200px;
     height: 250px;
     background: #111;
+    /* Fondo con imagen medio transparente */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('ruta-de-tu-imagen.jpg');
+    background-size: cover;
+    background-position: center;
+    
     border-radius: 20px;
     border: 3px solid var(--color-borde);
+    
+    /* Centrado Flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    
+    padding: 15px;
+    transition: 0.4s;
+    text-align: center;
+}
+
+/* Ajuste del Avatar */
+.amigo-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+/* Nombre y Social centrados */
+.amigo-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    transition: 0.4s;
+    width: 100%;
 }
 
-.amigo-card:hover { transform: translateY(-10px); box-shadow: 0 0 20px var(--color-borde); }
-
-.amigo-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 2px solid white;
+.amigo-nombre { 
+    margin: 5px 0; 
+    font-size: 16px; 
+    color: white; 
 }
-
-.amigo-nombre { font-size: 18px; margin: 0; color: white; }
 
 .amigo-social {
-    margin-top: 15px;
     display: flex;
-    gap: 15px;
-    font-size: 20px;
+    justify-content: center; /* Asegura que los logos estén en el medio */
+    gap: 10px;
+    margin-top: 8px;
 }
-
-.amigo-social a { color: #fff; transition: 0.3s; }
-.amigo-social a:hover { color: var(--color-borde); }
