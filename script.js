@@ -64,7 +64,7 @@ function renderMusica() {
 
 // --- PROYECTOS ---
 const proyectos = [
-    { nombre: "SintuxStudios", imagen: "p1.png", desc: "Estudio de minecraft", color: "#00cba9" },
+    { nombre: "SintuxStudios", imagen: "p1.png", desc: "Estudio de minecraft", color: "#40d7ea" },
     { nombre: "VIC", imagen: "p2.png", desc: "Virus variado", color: "#6919A6" },
     { nombre: "GTH", imagen: "p3.png", desc: "???", color: "#316FD4" },
     { nombre: "PerLove", imagen: "p4.png", desc: "???", color: "#A3271F" },
