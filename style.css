@@ -103,57 +103,38 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     justify-content: center !important;
 }
 
-/* Tarjeta de Amigo mejorada */
+/* --- Tarjeta de Amigo --- */
 .amigo-card {
     width: 200px;
     height: 250px;
     background: #111;
-    /* Fondo con imagen medio transparente */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('ruta-de-tu-imagen.jpg');
     background-size: cover;
     background-position: center;
-    
     border-radius: 20px;
     border: 3px solid var(--color-borde);
-    
-    /* Centrado Flexbox */
-    display: flex;
-    flex-direction: column;
-    align-items: center;    /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    
-    padding: 15px;
-    transition: 0.4s;
-    text-align: center;
-}
-
-/* Ajuste del Avatar */
-.amigo-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    border: 2px solid white;
-    object-fit: cover;
-}
-
-/* Nombre y Social centrados */
-.amigo-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    padding: 15px;
+    transition: 0.4s ease; /* Suaviza el agrandado */
+    cursor: pointer;
 }
 
-.amigo-nombre { 
-    margin: 5px 0; 
-    font-size: 16px; 
+/* Efecto Hover: Agrandar e iluminar */
+.amigo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--color-borde);
+}
+
+/* Iconos de Media: Color inicial blanco, cambian al color del borde */
+.amigo-social a {
     color: white; 
+    transition: 0.3s;
+    font-size: 20px;
+    margin: 0 5px;
 }
 
-.amigo-social {
-    display: flex;
-    justify-content: center; /* Asegura que los logos estén en el medio */
-    gap: 10px;
-    margin-top: 8px;
+.amigo-card:hover .amigo-social a {
+    color: var(--color-borde); /* Cambia al color del borde al pasar el cursor */
 }
