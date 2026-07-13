@@ -30,18 +30,16 @@ function renderMusica() {
 // Llamar a la función al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     renderMusica();
-    // (Tu código de proyectos sigue aquí abajo)
 });
 const proyectos = [
     { nombre: "SintuxStudios", imagen: "p1.png", desc: "Estudio de minecraft", color: "#00cba9" },
-    { nombre: "VIC", imagen: "p2.png", desc: "Virus variado", color: "#ff4500" },
-    { nombre: "GTH", imagen: "p3.png", desc: "Descripción GTH", color: "#9b30ff" },
-    { nombre: "PerLove", imagen: "p4.png", desc: "Love App", color: "#ffd700" },
-    // Añade más proyectos aquí para completar la fila inferior
-    { nombre: "Proyecto 5", imagen: "p5.png", desc: "Desc 5", color: "#00bfff" },
-    { nombre: "Proyecto 6", imagen: "p6.png", desc: "Desc 6", color: "#ff69b4" },
-    { nombre: "Proyecto 7", imagen: "p7.png", desc: "Desc 7", color: "#7fff00" },
-    { nombre: "Proyecto 8", imagen: "p8.png", desc: "Desc 8", color: "#ffffff" }
+    { nombre: "VIC", imagen: "p2.png", desc: "Virus variado", color: "#26063D" },
+    { nombre: "GTH", imagen: "p3.png", desc: "???", color: "#316FD4" },
+    { nombre: "PerLove", imagen: "p4.png", desc: "???", color: "#A3271F" },
+    { nombre: "Proximamente", imagen: "p5.png", desc: "Desc 5", color: "#757575" },
+    { nombre: "Proximamente", imagen: "p6.png", desc: "Desc 6", color: "#757575" },
+    { nombre: "Proximamente", imagen: "p7.png", desc: "Desc 7", color: "#757575" },
+    { nombre: "Proximamente", imagen: "p8.png", desc: "Desc 8", color: "#757575" }
 ];
 
 const container = document.getElementById('proyectos-container');
