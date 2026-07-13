@@ -26,7 +26,7 @@ function renderAmigos() {
                 <h3 class="amigo-nombre">${amigo.nombre}</h3>
                 <div class="amigo-social">
                     <a href="https://instagram.com/${amigo.insta}" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" title="${amigo.discord}"><i class="fab fa-discord"></i></a>
+                    <a href="https://discord.com/users/${amigo.discord}" target="_blank" title="${amigo.discord}"><i class="fab fa-discord"></i></a>
                 </div>
             </div>
         `;
