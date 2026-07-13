@@ -1,3 +1,4 @@
+// --- AMIGOS ---
 const amigos = [
     { nombre: "Amigo 1", imagen: "avatar1.png", insta: "usuario1", discord: "user#1234", color: "#00cba9" },
     { nombre: "Amigo 2", imagen: "avatar2.png", insta: "usuario2", discord: "user#5678", color: "#ff4500" },
@@ -7,6 +8,7 @@ const amigos = [
 
 function renderAmigos() {
     const container = document.getElementById('amigos-container');
+    if (!container) return;
     container.innerHTML = ''; 
 
     amigos.forEach(amigo => {
@@ -27,17 +29,17 @@ function renderAmigos() {
         container.appendChild(card);
     });
 }
-// --- Sección Música Dinámica ---
+
+// --- MÚSICA ---
 const musicas = [
     { titulo: "Track 1", artista: "Artista A", img: "m1.png", url: "#" },
     { titulo: "Track 2", artista: "Artista B", img: "m2.png", url: "#" },
     { titulo: "Track 3", artista: "Artista C", img: "m3.png", url: "#" }
 ];
 
-const musicContainer = document.getElementById('music-container');
-
 function renderMusica() {
-    if (!musicContainer) return; // Seguridad por si la sección no está en el HTML
+    const musicContainer = document.getElementById('music-container');
+    if (!musicContainer) return;
     
     musicContainer.innerHTML = '';
     
@@ -56,10 +58,7 @@ function renderMusica() {
     });
 }
 
-// Llamar a la función al cargar la página
-document.addEventListener('DOMContentLoaded', () => {
-    renderMusica();
-});
+// --- PROYECTOS ---
 const proyectos = [
     { nombre: "SintuxStudios", imagen: "p1.png", desc: "Estudio de minecraft", color: "#00cba9" },
     { nombre: "VIC", imagen: "p2.png", desc: "Virus variado", color: "#26063D" },
@@ -71,25 +70,35 @@ const proyectos = [
     { nombre: "Proximamente", imagen: "p8.png", desc: "Desc 8", color: "#757575" }
 ];
 
-const container = document.getElementById('proyectos-container');
-container.innerHTML = ''; // Limpiamos antes de inyectar
+function renderProyectos() {
+    const container = document.getElementById('proyectos-container');
+    if (!container) return;
+    container.innerHTML = '';
 
-proyectos.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'proyecto-card';
-    card.style.setProperty('--color-borde', p.color); // Inyectamos el color único
-    
-    card.innerHTML = `
-        <img src="${p.imagen}" alt="${p.nombre}">
-        <div class="proyecto-nombre">
-            <div class="titulo">${p.nombre}</div>
-            <div class="descripcion">${p.desc}</div>
-        </div>
-    `;
-    container.appendChild(card);
+    proyectos.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'proyecto-card';
+        card.style.setProperty('--color-borde', p.color);
+        
+        card.innerHTML = `
+            <img src="${p.imagen}" alt="${p.nombre}">
+            <div class="proyecto-nombre">
+                <div class="titulo">${p.nombre}</div>
+                <div class="descripcion">${p.desc}</div>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
+
+// --- INICIALIZACIÓN ---
+document.addEventListener('DOMContentLoaded', () => {
+    renderAmigos();
+    renderMusica();
+    renderProyectos();
 });
 
-// Navegación lógica
+// --- NAVEGACIÓN ---
 const navIcons = document.querySelectorAll('.nav-icon');
 const sections = document.querySelectorAll('.content-section');
 
