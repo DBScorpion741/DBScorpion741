@@ -1,7 +1,8 @@
 const amigos = [
     { nombre: "Amigo 1", imagen: "avatar1.png", insta: "usuario1", discord: "user#1234", color: "#00cba9" },
     { nombre: "Amigo 2", imagen: "avatar2.png", insta: "usuario2", discord: "user#5678", color: "#ff4500" },
-    // Añade más amigos aquí...
+    { nombre: "Amigo 3", imagen: "avatar3.png", insta: "usuario3", discord: "user#5678", color: "#ff4500" },
+    { nombre: "Amigo 4", imagen: "avatar4.png", insta: "usuario4", discord: "user#5678", color: "#ff4500" }    
 ];
 
 function renderAmigos() {
