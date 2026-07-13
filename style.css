@@ -118,7 +118,8 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     align-items: center; 
     justify-content: center;
     padding: 15px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    /* Usamos 'all' para que tanto la tarjeta como los hijos se animen */
+    transition: all 0.4s ease;
     text-align: center;
     cursor: pointer;
 }
@@ -158,11 +159,17 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     margin-top: 8px;
 }
 
-/* Iconos blancos por defecto y cambio a color borde en hover */
-.amigo-social a i {
+/* --- SOLUCIÓN: Iconos sociales --- */
+/* Forzamos que el color sea blanco y herede transiciones */
+.amigo-social a {
     color: #ffffff !important;
     font-size: 20px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease !important;
+}
+
+/* Aplicamos el cambio de color al icono (i) al hacer hover sobre la tarjeta */
+.amigo-card:hover .amigo-social a {
+    color: var(--color-borde) !important;
 }
 
 .amigo-card:hover .amigo-social a i {
