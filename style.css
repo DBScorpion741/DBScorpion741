@@ -26,17 +26,8 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .social a:hover { filter: drop-shadow(0 0 8px #fff); transform: scale(1.2); }
 
 /* --- Centrado y Secciones --- */
-.content-section { 
-    min-height: 100vh; display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; text-align: center; width: 100%;
-}
-
-.section-header {
-    display: flex; flex-direction: column; align-items: center;
-    justify-content: center; margin-bottom: 40px;
-    width: 100%; text-align: center;
-}
-
+.content-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width: 100%; }
+.section-header { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 40px; width: 100%; text-align: center; }
 .hero-title { margin: 0; font-size: 40px; text-transform: uppercase; color: white; }
 .section-desc { margin: 10px 0 0 0; color: #cccccc; max-width: 600px; font-size: 1.1rem; text-align: center; }
 
@@ -81,7 +72,7 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .amigo-nombre { margin: 5px 0; font-size: 16px; color: white; }
 .amigo-social { display: flex; justify-content: center; gap: 10px; margin-top: 8px; }
 
-/* Iconos Sociales */
+/* --- Iconos Sociales (Solución Final) --- */
 .amigo-social a {
     color: #ffffff !important;
     font-size: 20px;
@@ -91,8 +82,22 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
     display: inline-block;
 }
 
-/* Solo iluminan al pasar sobre ellos */
+/* Forzar color en elementos generados por FontAwesome (i o svg) */
+.amigo-social a i, 
+.amigo-social a svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+/* El cambio de color e iluminación ocurre AL PASAR EL MOUSE POR EL ICONO */
 .amigo-social a:hover {
     color: var(--color-borde) !important;
+}
+
+.amigo-social a:hover i, 
+.amigo-social a:hover svg {
+    color: var(--color-borde) !important;
+    fill: var(--color-borde) !important;
     filter: drop-shadow(0 0 5px var(--color-borde));
 }
