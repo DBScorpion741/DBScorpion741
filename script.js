@@ -1,9 +1,9 @@
 // --- AMIGOS ---
 const amigos = [
-    { nombre: "Amigo 1", imagen: "avatar1.png", insta: "usuario1", discord: "user#1234", color: "#00cba9" },
-    { nombre: "Amigo 2", imagen: "avatar2.png", insta: "usuario2", discord: "user#5678", color: "#ff4500" },
-    { nombre: "Amigo 3", imagen: "avatar3.png", insta: "usuario3", discord: "user#5678", color: "#ff4500" },
-    { nombre: "Amigo 4", imagen: "avatar4.png", insta: "usuario4", discord: "user#5678", color: "#ff4500" }    
+    { nombre: "Amigo 1", imagen: "avatar1.png", fondo: "fondo1.png", insta: "usuario1", discord: "user#1234", color: "#00cba9" },
+    { nombre: "Amigo 2", imagen: "avatar2.png", fondo: "fondo2.png", insta: "usuario2", discord: "user#5678", color: "#ff4500" },
+    { nombre: "Amigo 3", imagen: "avatar3.png", fondo: "fondo3.png", insta: "usuario3", discord: "user#5678", color: "#ff4500" },
+    { nombre: "Amigo 4", imagen: "avatar4.png", fondo: "fondo4.png", insta: "usuario4", discord: "user#5678", color: "#ff4500" }    
 ];
 
 function renderAmigos() {
@@ -15,6 +15,10 @@ function renderAmigos() {
         const card = document.createElement('div');
         card.className = 'amigo-card';
         card.style.setProperty('--color-borde', amigo.color);
+        // Aplicamos el fondo con el degradado transparente
+        card.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${amigo.fondo}')`;
+        card.style.backgroundSize = "cover";
+        card.style.backgroundPosition = "center";
         
         card.innerHTML = `
             <img src="${amigo.imagen}" alt="${amigo.nombre}" class="amigo-avatar">
