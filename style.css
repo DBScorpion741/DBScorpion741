@@ -24,19 +24,30 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 .social a { color: #ffffff !important; font-size: 22px; transition: 0.3s; text-decoration: none; }
 .social a:hover { filter: drop-shadow(0 0 8px #fff); transform: scale(1.2); }
 
-/* --- Secciones y Encabezados (Corregido) --- */
-.content-section { 
-    min-height: 100vh; display: flex; flex-direction: column; 
-    justify-content: center; align-items: center; text-align: center; width: 100%;
-}
-
+/* --- Encabezados de sección (Estandarizado) --- */
 .section-header {
-    display: flex; flex-direction: column; align-items: center;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px; /* Espacio fijo entre el texto y el contenido */
+    padding: 0 20px;
 }
 
-.hero-title { margin: 0; font-size: 40px; text-transform: uppercase; color: white; }
-.section-desc { margin: 5px 0 0 0; color: #cccccc; max-width: 600px; font-size: 1.1rem; }
+.hero-title { 
+    margin: 0; 
+    font-size: 40px; 
+    text-transform: uppercase; 
+    color: white; 
+}
+
+.section-desc { 
+    margin: 10px 0 0 0; /* Separación controlada con el título */
+    color: #cccccc; 
+    max-width: 600px; 
+    font-size: 1.1rem; 
+    text-align: center;
+}
 
 /* --- Grid de Proyectos --- */
 .proyectos-grid { 
