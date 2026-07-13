@@ -1,3 +1,37 @@
+// --- Sección Música Dinámica ---
+const musicas = [
+    { titulo: "Track 1", artista: "Artista A", img: "m1.png", url: "#" },
+    { titulo: "Track 2", artista: "Artista B", img: "m2.png", url: "#" },
+    { titulo: "Track 3", artista: "Artista C", img: "m3.png", url: "#" }
+];
+
+const musicContainer = document.getElementById('music-container');
+
+function renderMusica() {
+    if (!musicContainer) return; // Seguridad por si la sección no está en el HTML
+    
+    musicContainer.innerHTML = '';
+    
+    musicas.forEach(track => {
+        const item = document.createElement('div');
+        item.className = 'music-item';
+        item.innerHTML = `
+            <img src="${track.img}" alt="${track.titulo}" class="music-art">
+            <div class="music-details">
+                <h3 class="track-title">${track.titulo}</h3>
+                <p class="track-artist">${track.artista}</p>
+            </div>
+            <a href="${track.url}" class="play-btn" target="_blank"><i class="fas fa-play"></i></a>
+        `;
+        musicContainer.appendChild(item);
+    });
+}
+
+// Llamar a la función al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    renderMusica();
+    // (Tu código de proyectos sigue aquí abajo)
+});
 const proyectos = [
     { nombre: "SintuxStudios", imagen: "p1.png", desc: "Estudio de minecraft", color: "#00cba9" },
     { nombre: "VIC", imagen: "p2.png", desc: "Virus variado", color: "#ff4500" },
