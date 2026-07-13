@@ -1,9 +1,13 @@
 // --- AMIGOS ---
 const amigos = [
-    { nombre: "Guillermito", imagen: "avatar1.png", fondo: "fondo1.png", insta: "usuario1", discord: "user#1234", color: "#DBDB46" },
-    { nombre: "Tu madre", imagen: "avatar2.png", fondo: "fondo2.png", insta: "usuario2", discord: "user#5678", color: "#757575" },
+    { nombre: "Guillermito", imagen: "avatar1.png", fondo: "fondo1.png", insta: "guillermox", discord: "user#1234", color: "#DBDB46" },
+    { nombre: "Chiazu", imagen: "avatar2.png", fondo: "fondo2.png", insta: "chiazu", discord: "user#5678", color: "#757575" },
     { nombre: "Tu prima", imagen: "avatar3.png", fondo: "fondo3.png", insta: "usuario3", discord: "user#5678", color: "#757575" },
-    { nombre: "Tu hermana", imagen: "avatar4.png", fondo: "fondo4.png", insta: "usuario4", discord: "user#5678", color: "#757575" }    
+    { nombre: "Tu hermana", imagen: "avatar4.png", fondo: "fondo4.png", insta: "usuario4", discord: "user#5678", color: "#757575" },
+    { nombre: "Tu sobrina", imagen: "avatar5.png", fondo: "fondo5.png", insta: "usuario1", discord: "user#1234", color: "#DBDB46" },
+    { nombre: "Tu tia", imagen: "avatar6.png", fondo: "fondo6.png", insta: "usuario2", discord: "user#5678", color: "#757575" },
+    { nombre: "Tu abuela", imagen: "avatar7.png", fondo: "fondo7.png", insta: "usuario3", discord: "user#5678", color: "#757575" },
+    { nombre: "Tu madrastra", imagen: "avatar8.png", fondo: "fondo8.png", insta: "usuario4", discord: "user#5678", color: "#757575" }     
 ];
 
 function renderAmigos() {
