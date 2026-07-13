@@ -43,7 +43,7 @@ body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI',
 }
 
 .hero-title { margin-top: 20px; font-size: 40px; text-transform: uppercase; color: white; }
-.section-desc { margin-top: 5px; color: #cccccc; max-width: 600px; font-size: 1.1rem; }
+.section-desc { margin-top: 5px 0 0 0; color: #cccccc; max-width: 600px; font-size: 1.1rem; }
 
 /* --- Grid 4xN Forzado --- */
 .proyectos-grid { 
