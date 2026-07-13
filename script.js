@@ -1,3 +1,31 @@
+const amigos = [
+    { nombre: "Amigo 1", imagen: "avatar1.png", insta: "usuario1", discord: "user#1234", color: "#00cba9" },
+    { nombre: "Amigo 2", imagen: "avatar2.png", insta: "usuario2", discord: "user#5678", color: "#ff4500" },
+    // Añade más amigos aquí...
+];
+
+function renderAmigos() {
+    const container = document.getElementById('amigos-container');
+    container.innerHTML = ''; 
+
+    amigos.forEach(amigo => {
+        const card = document.createElement('div');
+        card.className = 'amigo-card';
+        card.style.setProperty('--color-borde', amigo.color);
+        
+        card.innerHTML = `
+            <img src="${amigo.imagen}" alt="${amigo.nombre}" class="amigo-avatar">
+            <div class="amigo-info">
+                <h3 class="amigo-nombre">${amigo.nombre}</h3>
+                <div class="amigo-social">
+                    <a href="https://instagram.com/${amigo.insta}" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="${amigo.discord}"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}
 // --- Sección Música Dinámica ---
 const musicas = [
     { titulo: "Track 1", artista: "Artista A", img: "m1.png", url: "#" },
