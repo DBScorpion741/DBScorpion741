@@ -40,9 +40,9 @@ function renderAmigos() {
 
 // --- MÚSICA ---
 const musicas = [
-    { titulo: "Wellerman", artista: "SintuxStudios", img: "m1.png", url: "#" },
+    { titulo: "Haiditing", artista: "SintuxStudios", img: "m1.png", url: "#" },
     { titulo: "Proximamente", artista: "???", img: "m2.png", url: "#" },
-    { titulo: "Proximamente", artista: "Artista C", img: "m3.png", url: "#" }
+    { titulo: "Proximamente", artista: "???", img: "m3.png", url: "#" }
 ];
 
 function renderMusica() {
