@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBSCORPION741 | Portafolio</title>
+    <link rel="icon" type="image/png" href="scorpion741.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <aside id="sidebar" class="sidebar" aria-label="Navegación de categorías">
+        <div class="sidebar-top">
+            <a href="#inicio" class="logo-link">
+                <span class="sidebar-brand">DBSCORPION741</span>
+            </a>
+            <button type="button" id="toggle-sidebar" class="sidebar-toggle" title="Ocultar o mostrar barra lateral" aria-label="Ocultar o mostrar barra lateral" aria-expanded="true">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#inicio" class="nav-link active" data-label="Inicio">
+                <i class="fas fa-home"></i>
+                <span class="nav-text">Inicio</span>
+            </a>
+            <a href="#proyectos" class="nav-link" data-label="Proyectos">
+                <i class="fas fa-folder"></i>
+                <span class="nav-text">Proyectos</span>
+            </a>
+            <a href="#musica" class="nav-link" data-label="Música">
+                <i class="fas fa-music"></i>
+                <span class="nav-text">Música</span>
+            </a>
+            <a href="#amigos" class="nav-link" data-label="Amigos">
+                <i class="fas fa-users"></i>
+                <span class="nav-text">Amigos</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-social">
+            <a href="https://instagram.com/dbscorpion741" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" title="Discord" aria-label="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+        </div>
+    </aside>
+
+    <div class="page-wrapper">
+        <main>
+            <section id="inicio" class="content-section hero-section">
+                <div class="hero-container">
+                    <img src="scorpion741.png" alt="DBScorpion741" class="hero-logo-large">
+                    <h1 class="hero-title">DBSCORPION741</h1>
+                    <p class="section-desc">Bienvenido a mi portafolio. Aquí podrás explorar mis proyectos, música original y círculo cercano. Por el momento mis servicios no están disponibles.</p>
+                </div>
+            </section>
+
+            <section id="proyectos" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">PROYECTOS</h2>
+                    <p class="section-desc">Descubre los proyectos en los que he estado trabajando y que te podrían interesar.</p>
+                </div>
+                <div id="proyectos-container" class="proyectos-grid"></div>
+            </section>
+
+            <section id="musica" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">MÚSICA</h2>
+                    <p class="section-desc">Una selección de música propia creada para mis proyectos.</p>
+                </div>
+                <div id="music-container" class="music-list"></div>
+            </section>
+
+            <section id="amigos" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">AMIGOS</h2>
+                    <p class="section-desc">Conoce a mis amigos, los cuales siempre piden yupi.</p>
+                </div>
+                <div id="amigos-container" class="amigos-grid"></div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>DBSCORPION741 — Portafolio personal</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
